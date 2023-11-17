@@ -27,7 +27,7 @@ install() {
 
     # Step 3: Get user input for IP and port
     clear
-    read -p "Please Enter Your IP : " new_ip
+    read -p "Please Enter Your IP or Domain : " new_ip
     read -p "Please Enter Your Config Port: " new_port
 
     # Step 4: Check if the inputs are not empty
