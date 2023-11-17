@@ -45,6 +45,7 @@ install() {
 }
 
 run() {
+    cd bale
     go run main.go
 }
 
