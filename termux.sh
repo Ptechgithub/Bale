@@ -46,7 +46,10 @@ install() {
 }
 
 run() {
-    cd bale
+    if [ -d "~/bale" ]; then
+        cd ~/bale
+    fi
+    
     go run main.go
 }
 
