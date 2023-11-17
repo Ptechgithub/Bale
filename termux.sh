@@ -46,6 +46,7 @@ install() {
 }
 
 run() {
+    cd
     go run main.go
 }
 
