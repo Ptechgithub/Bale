@@ -16,6 +16,7 @@ install() {
     pkg update -y
     check_dependencies
     mkdir bale
+    cd bale
     wget https://github.com/iSegaro/Bale/raw/main/bale.zip
     unzip bale.zip
     
