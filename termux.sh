@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#check_dependencies
 check_dependencies() {
     local dependencies=("wget" "curl" "golang" "openssl")
     
@@ -11,6 +12,7 @@ check_dependencies() {
     done
 }
 
+# install 
 install() {
 
     pkg update -y
@@ -45,11 +47,17 @@ install() {
     go run main.go
 }
 
+# run again
 run() {
-    cd bale
+
+    if [ "$(basename "$(pwd)")" != "bale" ]; then
+        cd bale || exit 1
+    fi
+    # Run the main.go file
     go run main.go
 }
 
+#Main menu
 main_menu() {
     clear
     echo "By --> Peyman * Github.com/Ptechgithub * "
